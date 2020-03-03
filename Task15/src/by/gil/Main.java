@@ -18,7 +18,6 @@ public class Main {
                 maxElement = array[i];
                 number = i + 1;
             }
-
         }
         if (number == array.length || number == 1) {
             if (number == array.length) {
