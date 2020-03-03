@@ -3,7 +3,7 @@ package by.gil;
 public class PrimeNumber {
 
     public static void main(String[] args) {
-        int number = 491;
+        int number = 492;
         boolean b = false;
         int c = 1;
         String a = "Число простое";
