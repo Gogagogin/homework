@@ -3,7 +3,7 @@ package by.gil;
 public class Main {
 
     public static void main(String[] args) {
-        String rub; //null
+        String rub= null; //null
         for (int i = 1; i <= 10; i++) {
             int s = (int) (Math.random() * 1000000);
             if (s % 10 == 1) {
