@@ -8,6 +8,8 @@ public class WordsCounter {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите строку :");
         String str = in.nextLine();
+        str = str.replaceAll("[,.!?]|[.+]" , "");
+        str = str.replaceAll("[-]" , " ");
         int blockCount = str.split(" +").length;
         if (str.charAt(0) == ' '){
             blockCount--;
