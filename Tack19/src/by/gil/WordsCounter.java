@@ -14,7 +14,7 @@ public class WordsCounter {
         if (str.charAt(0) == ' '){
             blockCount--;
         }
-        System.out.println(blockCount);
+        System.out.println("Количество слов равно " + blockCount);
     }
 
 }
