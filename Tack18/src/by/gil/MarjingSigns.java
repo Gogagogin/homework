@@ -48,7 +48,7 @@ public class MarjingSigns {
                             + "точки с заятой, в количестве " + semicolon +"\n"
                             + "двоеточия, в количестве " + colon +"\n"
                             + "знаки вопроса, в количестве " + qMark +"\n"
-                            + "тире, в количестве " + qMark +"\n"
+                            + "тире, в количестве " + dash +"\n"
                             + "всего знаков припенания в строке : " + (comma + point + exMark + semicolon + colon + qMark+ dash));
     }
 }
