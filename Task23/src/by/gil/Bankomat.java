@@ -53,7 +53,7 @@ public class Bankomat {
                     }
                 }
             }
-            if (numberOfOperation == 2) {
+            else if (numberOfOperation == 2) {
 
                 Scanner extraditionOfMoney = new Scanner(System.in);
                 bankomat.getSum();
@@ -63,14 +63,14 @@ public class Bankomat {
                 bankomat.getSum();
             }
 
-            if (numberOfOperation == 3) {
+            else if (numberOfOperation == 3) {
                 bankomat.getSum();
             }
 
-            if (numberOfOperation == 4) {
+            else if (numberOfOperation == 4) {
                 break;
             } else {
-                System.out.println("Error");
+                System.out.println("Error, нет такой операции");
             }
         }
     }

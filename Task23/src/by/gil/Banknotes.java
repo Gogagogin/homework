@@ -42,8 +42,19 @@ public class Banknotes {
         return numberOfHundred;
     }*/
 
+
     public void getSum() {
-        System.out.println("В банкомате сейчас " + ((numberOfHundred * 100) + (numberOfFifty * 50) + (numberOfTwenty * 20)) + " Минимальная купюра 20");
+        int minNote = 20;
+
+        if (numberOfTwenty ==0) {
+            if(numberOfFifty!= 0) {
+                minNote = 50;
+            } else {
+                minNote = 100;
+            }
+        }
+
+        System.out.println("В банкомате сейчас " + ((numberOfHundred * 100) + (numberOfFifty * 50) + (numberOfTwenty * 20)) + " Минимальная купюра " + minNote);
     }
 
 
@@ -70,18 +81,22 @@ public class Banknotes {
         if (this.numberOfTwenty < uotPutNumberOfTwenty) {
             uotPutNumberOfTwenty = this.numberOfTwenty;
         }
-        if (this.numberOfHundred == 0 || this.numberOfFifty == 0 || requestedSum % 20 != 0) {
+        if (this.numberOfHundred == 0 && this.numberOfFifty == 0 && requestedSum % 20 != 0) {
 
-            System.out.println(" Я не могу выдать такую сумму, простите");
+            System.out.println("Я не могу выдать такую сумму, простите");
             return false;
 
         } else {
-            System.out.println(uotPutNumberOfHundred + " Х 100 " +
-                    uotPutNumberOfFifty + " Х 50 " +
-                    uotPutNumberOfTwenty + " Х 20 ");
-            this.numberOfTwenty -= uotPutNumberOfTwenty;
-            this.numberOfFifty -= uotPutNumberOfFifty;
-            this.numberOfHundred -= uotPutNumberOfHundred;
+            if (uotPutNumberOfHundred == 0 && uotPutNumberOfFifty == 0 && uotPutNumberOfTwenty == 0) {
+                System.out.println("Извените, не могу выдать такую сумму");
+            } else {
+                System.out.println(uotPutNumberOfHundred + " Х 100 " +
+                        uotPutNumberOfFifty + " Х 50 " +
+                        uotPutNumberOfTwenty + " Х 20 ");
+                this.numberOfTwenty -= uotPutNumberOfTwenty;
+                this.numberOfFifty -= uotPutNumberOfFifty;
+                this.numberOfHundred -= uotPutNumberOfHundred;
+            }
 
 
             return true;
